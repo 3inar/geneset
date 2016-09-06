@@ -1,0 +1,10 @@
+Package: geneset
+Type: Package
+Title: Useful gene expression signatures, etc.
+Version: 0.1.0
+Author: Einar Holsbø <einar@cs.uit.no>
+Maintainer: Einar Holsbø <einar@cs.uit.no>
+Description: Collects gene sets that I've found useful and functions for working with these.
+License: MIT + file LICENSE
+LazyData: TRUE
+RoxygenNote: 5.0.1
