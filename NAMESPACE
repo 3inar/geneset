@@ -2,3 +2,4 @@
 
 export(gsfilter)
 export(gsintersect)
+export(load_gmt)

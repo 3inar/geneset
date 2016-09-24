@@ -8,5 +8,5 @@ Description: Collects gene sets that I've found useful and functions for working
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
-imports: plyr
+imports: plyr, stringr
 Suggests: testthat
