@@ -14,8 +14,7 @@
 #' @seealso \code{\link{gset}}
 #' @examples
 #' data(smoking)
-#' names(smoking)
-#' smoking[[1]]
+#' smoking[1]
 "smoking"
 
 

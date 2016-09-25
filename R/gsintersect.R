@@ -1,16 +1,22 @@
 #' Gene set/gene list intersect
 #'
-#' Returns the intersection between each gene set in a gene set list and
+#' Returns the set intersection between each gene set in a \code{gset} and
 #' a list of gene names. Useful for stripping gene sets of genes that aren't
 #' in your own data.
 #'
-#' @param gslist A list of gene sets (character vectors of gene symbols)
-#' @param genenames A vector of gene symbols that you want to keep in \code{gslist}.
+#' @param geneset a \code{gset} object
+#' @param genenames A vector of gene symbols that you want to keep in \code{geneset}.
 #'
-#' @return A list of gene sets
+#' @return a \code{gset} object
+#' @seealso \code{\link{gset}}
 #'
 #' @export
-gsintersect <- function(gslist, genenames) {
-  stopifnot(is.list(gslist), is.character(genenames))
-  plyr::llply(gslist, intersect, genenames)
+gsintersect <- function(geneset, genenames) {
+  stopifnot(class(geneset) == "gset")
+  stopifnot(is.character(genenames))
+
+  filtered <- plyr::llply(geneset$genesets, intersect, genenames)
+  geneset$genesets <- filtered
+
+  geneset
 }

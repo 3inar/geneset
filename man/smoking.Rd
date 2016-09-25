@@ -22,8 +22,7 @@ A dataset containing gene sets from Huan et al., 2016, see source.
 }
 \examples{
 data(smoking)
-names(smoking)
-smoking[[1]]
+smoking[1]
 }
 \seealso{
 \code{\link{gset}}

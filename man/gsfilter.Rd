@@ -2,12 +2,12 @@
 % Please edit documentation in R/gsfilter.R
 \name{gsfilter}
 \alias{gsfilter}
-\title{Filter gene set list by size of set}
+\title{Filter gene set by size of set}
 \usage{
 gsfilter(geneset, min = 5, max = Inf)
 }
 \arguments{
-\item{geneset}{A list of gene sets (character vectors)}
+\item{geneset}{a \code{gset} object}
 
 \item{min}{the smallest size of gene set to keep in the list}
 
@@ -15,10 +15,13 @@ gsfilter(geneset, min = 5, max = Inf)
 infinity)}
 }
 \value{
-A list of gene sets
+A \code{gset} object
 }
 \description{
 Removes gene sets smaller than \code{min}, larger than \code{max} from the input
-gene set list.
+gene set \code{gset} object.
+}
+\seealso{
+\code{\link{gset}}
 }
 

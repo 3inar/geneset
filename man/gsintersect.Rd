@@ -4,19 +4,22 @@
 \alias{gsintersect}
 \title{Gene set/gene list intersect}
 \usage{
-gsintersect(gslist, genenames)
+gsintersect(geneset, genenames)
 }
 \arguments{
-\item{gslist}{A list of gene sets (character vectors of gene symbols)}
+\item{geneset}{a \code{gset} object}
 
-\item{genenames}{A vector of gene symbols that you want to keep in \code{gslist}.}
+\item{genenames}{A vector of gene symbols that you want to keep in \code{geneset}.}
 }
 \value{
-A list of gene sets
+a \code{gset} object
 }
 \description{
-Returns the intersection between each gene set in a gene set list and
+Returns the set intersection between each gene set in a \code{gset} and
 a list of gene names. Useful for stripping gene sets of genes that aren't
 in your own data.
+}
+\seealso{
+\code{\link{gset}}
 }
 
