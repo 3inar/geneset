@@ -12,7 +12,7 @@ This package contains the following data sets:
 examples
 ========
 
-### installation:
+### installation
 
 ``` r
 devtools::install_github("3inar/geneset")
@@ -20,64 +20,133 @@ devtools::install_github("3inar/geneset")
 
 ### load `.gmt` files
 
-If you're working with gene sets from MSigDB, it's quite likely that you have files in the Gene Matrix Transposed format; the `load_gmt()` function will read a `.gmt` file into a list structure:
+If you're working with gene sets from MSigDB, it's quite likely that you have files in the Gene Matrix Transposed format; the `load_gmt()` function will read a `.gmt` file into a `gset` object:
 
 ``` r
 library(geneset)
-gset <- load_gmt("tests/testthat/testgmt.gmt")  # dummy .gmt file for testing
-gset$names
+geneset <- load_gmt("tests/testthat/testgmt.gmt")  # dummy .gmt file for testing
+geneset
 ```
 
+    ## $names
     ## [1] "set1"         "set2"         "name w space"
-
-``` r
-gset$descriptions
-```
-
-    ## [1] "description 1" "description 2" "description3"
-
-``` r
-gset$genesets
-```
-
-    ## [[1]]
+    ## 
+    ## $descriptions
+    ## [1] "description 1" "description 2" "description3" 
+    ## 
+    ## $genesets
+    ## $genesets[[1]]
     ## [1] "a" "b" "c"
     ## 
-    ## [[2]]
+    ## $genesets[[2]]
     ## [1] "d" "e" "f"
     ## 
-    ## [[3]]
+    ## $genesets[[3]]
     ## [1] "a" "b" "c" "d" "e" "f" "g"
+    ## 
+    ## 
+    ## attr(,"class")
+    ## [1] "gset"
+
+### subset `gset` objects
+
+You can subset `gset`s like you would a vector. There is also a `lenght` function for them that returns the number of sets in the `gset`:
+
+``` r
+geneset[2]
+```
+
+    ## $names
+    ## [1] "set2"
+    ## 
+    ## $descriptions
+    ## [1] "description 2"
+    ## 
+    ## $genesets
+    ## $genesets[[1]]
+    ## [1] "d" "e" "f"
+    ## 
+    ## 
+    ## attr(,"class")
+    ## [1] "gset"
+
+``` r
+geneset[c(T, F, T)]
+```
+
+    ## $names
+    ## [1] "set1"         "name w space"
+    ## 
+    ## $descriptions
+    ## [1] "description 1" "description3" 
+    ## 
+    ## $genesets
+    ## $genesets[[1]]
+    ## [1] "a" "b" "c"
+    ## 
+    ## $genesets[[2]]
+    ## [1] "a" "b" "c" "d" "e" "f" "g"
+    ## 
+    ## 
+    ## attr(,"class")
+    ## [1] "gset"
+
+``` r
+length(geneset)
+```
+
+    ## [1] 3
 
 ### remove genes that aren't in your data
 
 Inevitably some gene sets will contain symbols that for one reason or another aren't present in the data set you're investigating. These can be removed by `gsintersect()`:
 
 ``` r
-genesets <- gset$genesets
 mygenes <- c("a", "b", "d", "e", "f")
-genesets <- gsintersect(genesets, mygenes); genesets
+geneset <- gsintersect(geneset, mygenes); geneset
 ```
 
-    ## [[1]]
+    ## $names
+    ## [1] "set1"         "set2"         "name w space"
+    ## 
+    ## $descriptions
+    ## [1] "description 1" "description 2" "description3" 
+    ## 
+    ## $genesets
+    ## $genesets[[1]]
     ## [1] "a" "b"
     ## 
-    ## [[2]]
+    ## $genesets[[2]]
     ## [1] "d" "e" "f"
     ## 
-    ## [[3]]
+    ## $genesets[[3]]
     ## [1] "a" "b" "d" "e" "f"
+    ## 
+    ## 
+    ## attr(,"class")
+    ## [1] "gset"
 
 ### filter out gene sets that are too small or large
 
 Perhaps a two-gene set is too small to be taken seriously for whatever reason, `gsfilter()` will remove gene sets with cardinality outside of provided limits:
 
 ``` r
-genesets <- gsfilter(genesets, min=3); genesets
+geneset <- gsfilter(geneset, min=3); geneset
 ```
 
-    ## [[1]]
+    ## $names
+    ## [1] "set2"         "name w space"
+    ## 
+    ## $descriptions
+    ## [1] "description 2" "description3" 
+    ## 
+    ## $genesets
+    ## $genesets[[1]]
     ## [1] "d" "e" "f"
     ## 
-    ## [[2]]
+    ## $genesets[[2]]
     ## [1] "a" "b" "d" "e" "f"
+    ## 
+    ## 
+    ## attr(,"class")
+    ## [1] "gset"
