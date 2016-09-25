@@ -26,3 +26,17 @@ gset <- function(gsnames, gsdesc, gslist) {
 
   gs
 }
+
+#' @export
+`[.gset` <- function(x, i) {
+  x$names <- x$names[i]
+  x$descriptions <- x$descriptions[i]
+  x$genesets <- x$genesets[i]
+
+  x
+}
+
+#' @export
+length.gset <- function(x) {
+  length(x$names)
+}

@@ -29,3 +29,25 @@ test_that("gset checks argument lengths", {
   expect_error(gset(n, d, long_list))
   expect_error(gset(n, d, g[1]))
 })
+
+test_that("subsetting gset makes sense", {
+  g_one <- gs[1]
+  g_two <- gs[2]
+
+  expect_identical(g_one$names, n[1])
+  expect_identical(g_one$descriptions, d[1])
+  expect_identical(g_one$genesets, g[1])
+
+  expect_identical(g_two$names, n[2])
+  expect_identical(g_two$descriptions, d[2])
+  expect_identical(g_two$genesets, g[2])
+
+  g_one <- gs[c(T, F)]
+  expect_identical(g_one$names, n[1])
+  expect_identical(g_one$descriptions, d[1])
+  expect_identical(g_one$genesets, g[1])
+})
+
+test_that("length is well-defined", {
+  expect_equal(length(gs), 2)
+})
