@@ -14,9 +14,9 @@
 #' @return a \code{gset} object. See above
 #' @export
 gset <- function(gsnames, gsdesc, gslist) {
-  stopifnot(is(gsnames, "character"))
-  stopifnot(is(gsdesc, "character"))
-  stopifnot(is(gslist, "list"))
+  stopifnot(class(gsnames) == "character")
+  stopifnot(class(gsdesc) == "character")
+  stopifnot(class(gslist) == "list")
 
   stopifnot(length(gsnames) == length(gsdesc))
   stopifnot(length(gsdesc) == length(gslist))
