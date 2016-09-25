@@ -2,8 +2,7 @@
 #'
 #' A dataset containing gene sets from Huan et al., 2016, see source.
 #'
-#' @format A list of character vectors containing the gene names of the following
-#' gene sets:
+#' @format A \code{\link{gset}} object with the following gene sets:
 #' \describe{
 #'  \item{Top 25 genes current vs. never smokers}{}
 #'  \item{Top 25 genes former vs. never smokers}{}
@@ -12,6 +11,7 @@
 #' A Whole-Blood Transcriptome Meta-Analysis Identifies Gene Expression Signatures of
 #' Cigarette Smoking. Hum Mol Genet. 2016 Aug 29
 #'
+#' @seealso \code{\link{gset}}
 #' @examples
 #' data(smoking)
 #' names(smoking)

@@ -4,8 +4,7 @@
 \name{smoking}
 \alias{smoking}
 \title{Gene expression signatures of cigarette smoking}
-\format{A list of character vectors containing the gene names of the following
-gene sets:
+\format{A \code{\link{gset}} object with the following gene sets:
 \describe{
  \item{Top 25 genes current vs. never smokers}{}
  \item{Top 25 genes former vs. never smokers}{}
@@ -25,6 +24,9 @@ A dataset containing gene sets from Huan et al., 2016, see source.
 data(smoking)
 names(smoking)
 smoking[[1]]
+}
+\seealso{
+\code{\link{gset}}
 }
 \keyword{datasets}
 
