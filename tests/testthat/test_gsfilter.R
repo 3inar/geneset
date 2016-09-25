@@ -12,6 +12,7 @@ test_that("gsfilter removes gene sets outside size range", {
   gs[[1]] <- c("a", "b", "c")
   expect_lt(length(gsfilter(gs, min=4)), length(gs))
   expect_lt(length(gsfilter(gs)), length(gs))
+  expect_equal(length(gsfilter(gs, min=3)), length(gs))
 
   gs <- smoking
   expect_equal(length(gsfilter(gs)), length(gs))

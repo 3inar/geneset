@@ -14,6 +14,6 @@
 gsfilter <- function(geneset, min=5, max=Inf) {
   stopifnot(is.numeric(min), is.numeric(max))
   lengths <- plyr::laply(geneset, length)
-  inside <- lengths > min & lengths < max
+  inside <- lengths >= min & lengths <= max
   geneset[inside]
 }
