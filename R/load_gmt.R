@@ -18,8 +18,5 @@ load_gmt <- function(file)
   gsdescriptions <- plyr::laply(sets, function(x) { x[2] })
   gsets <- plyr::llply(sets, function(x) { x[3:length(x)] })
 
-  res <- list(names=gsnames, descriptions=gsdescriptions, genesets=gsets)
-  class(res) <- "gset"
-
-  res
+  gset(gsnames, gsdescriptions, gsets)
 }
