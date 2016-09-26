@@ -17,7 +17,8 @@ a \code{gset} object
 \description{
 Returns the set intersection between each gene set in a \code{gset} and
 a list of gene names. Useful for stripping gene sets of genes that aren't
-in your own data.
+in your own data. If any of the gene sets have no genes in common with the
+\code{genenames} argument, they will be removed and a warning will be shown.
 }
 \seealso{
 \code{\link{gset}}

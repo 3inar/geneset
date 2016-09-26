@@ -2,8 +2,6 @@ gnames <- c("LRRN3", "MAL")
 data(smoking)
 gs <- smoking
 
-# TODO: what happens if intersect is empty set for some of them?
-# should remove them, throw warning.
 
 test_that("gsintersect takes a gset and a character vector", {
   expect_error(gsintersect(gs, 5))
@@ -22,3 +20,11 @@ test_that("gsintersect returns the set intersection", {
   expect_equal(length(newset$genesets[[1]]), 2)
   expect_equal(length(newset$genesets[[2]]), 2)
 })
+
+test_that("gs_intersect throws warning when the intersect is empty and removes the empty gene set", {
+  gs$genesets[[1]] <- c("a", "b", "c")
+  expect_warning(gs2 <- gsintersect(gs, gnames))
+  expect_equal(length(gs2), 1)
+})
+# TODO: what happens if intersect is empty set for some of them?
+# should remove them, throw warning.
