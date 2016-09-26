@@ -4,7 +4,7 @@
 \alias{gsfilter}
 \title{Filter gene set by size of set}
 \usage{
-gsfilter(geneset, min = 5, max = Inf)
+gsfilter(geneset, min = 0, max = Inf)
 }
 \arguments{
 \item{geneset}{a \code{gset} object}
@@ -19,7 +19,7 @@ A \code{gset} object
 }
 \description{
 Removes gene sets smaller than \code{min}, larger than \code{max} from the input
-gene set \code{gset} object.
+gene set \code{gset} object. By default does no filtering.
 }
 \seealso{
 \code{\link{gset}}
