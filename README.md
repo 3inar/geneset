@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/3inar/geneset.svg?branch=master)](https://travis-ci.org/3inar/geneset)
+
 geneset
 =======
 
