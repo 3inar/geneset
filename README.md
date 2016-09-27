@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/3inar/geneset.svg?branch=master)](https://travis-ci.org/3inar/geneset)
+[![Build Status](https://travis-ci.org/3inar/geneset.svg?branch=master)](https://travis-ci.org/3inar/geneset)[![codecov](https://codecov.io/gh/3inar/geneset/branch/master/graph/badge.svg)](https://codecov.io/gh/3inar/geneset)
 
 geneset
 =======
