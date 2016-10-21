@@ -7,9 +7,9 @@
 \title{Gene expression signatures of stress}
 \format{A \code{\link{gset}} object.}
 \source{
-U. Kuebler, C. Zuccarella-Hackl, A. Arpagaus, J. M. Wolf, F. Farahmand, R. von Känel, U. Ehlert, and P. H. Wirtz, “Stress-induced modulation of NF-κB activation, inflammation-associated gene expression, and cytokine levels in blood of healthy men,” Brain. Behav. Immun., vol. 46, pp. 87–95, 2015.
+U. Kuebler, C. Zuccarella-Hackl, A. Arpagaus, J. M. Wolf, F. Farahmand, R. von Känel, U. Ehlert, and P. H. Wirtz, “Stress-induced modulation of NF-\eqn{\kappa}B activation, inflammation-associated gene expression, and cytokine levels in blood of healthy men,” Brain. Behav. Immun., vol. 46, pp. 87–95, 2015.
 
-N. D. Powell, E. K. Sloan, M. T. Bailey, J. M. G. Arevalo, G. E. Miller, E. Chen, M. S. Kobor, B. F. Reader, J. F. Sheridan, and S. W. Cole, “Social stress up-regulates inflammatory gene expression in the leukocyte transcriptome via β-adrenergic induction of myelopoiesis.,” Proc. Natl. Acad. Sci. U. S. A., vol. 110, no. 41, pp. 16574–9, Oct. 2013.
+N. D. Powell, E. K. Sloan, M. T. Bailey, J. M. G. Arevalo, G. E. Miller, E. Chen, M. S. Kobor, B. F. Reader, J. F. Sheridan, and S. W. Cole, “Social stress up-regulates inflammatory gene expression in the leukocyte transcriptome via \eqn{\beta}-adrenergic induction of myelopoiesis.,” Proc. Natl. Acad. Sci. U. S. A., vol. 110, no. 41, pp. 16574–9, Oct. 2013.
 
 M. H. Antoni, S. K. Lutgendorf, B. Blomberg, C. S. Carver, S. Lechner, A. Diaz, J. Stagl, J. M. G. Arevalo, and S. W. Cole, “Cognitive-Behavioral Stress Management Reverses Anxiety-Related Leukocyte Transcriptional Dynamics,” Biol. Psychiatry, vol. 71, no. 4, pp. 366–372, 2012.
 
