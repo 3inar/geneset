@@ -10,6 +10,7 @@ Gene sets and functions for working with them.
 This package contains the following data sets:
 
 -   `smoking`: Blood transcriptome gene signatures that associate with cigarette smoking from the Huan et al. 2016 meta-analysis <http://dx.doi.org/10.1093/hmg/ddw288>
+-   `stress`: Gene expression levels in blood found as signatures of stress in five different studies. See the in-package description `?stress` for details.
 
 examples
 ========
