@@ -1,7 +1,7 @@
 Package: geneset
 Type: Package
 Title: Some gene sets and functions for working with them
-Version: 0.2.1
+Version: 0.2.2
 Author: Einar Holsbø <einar@cs.uit.no>
 Maintainer: Einar Holsbø <einar@cs.uit.no>
 Description: Collects gene sets that I've found useful and functions for working with these.
