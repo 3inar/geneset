@@ -1,5 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
-README.Rmd
-.travis.yml
+^README.Rmd$
+^.travis.yml$
