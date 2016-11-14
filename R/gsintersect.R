@@ -23,8 +23,8 @@ gsintersect <- function(geneset, genenames) {
 
   if (any(emptyset)) {
     emptynames <- geneset$names[emptyset]
-    warning("the following ", length(emptynames), " gene set(s) have an empty intersection and will be removed:\n",
-            emptynames)
+    warning("removing the following ", length(emptynames), " gene set(s) due to empty intersect:\n",
+            paste0(emptynames, '\n'))
     geneset <- geneset[!emptyset]
   }
 

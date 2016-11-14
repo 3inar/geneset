@@ -22,9 +22,13 @@ test_that("gsintersect returns the set intersection", {
 })
 
 test_that("gs_intersect throws warning when the intersect is empty and removes the empty gene set", {
-  gs$genesets[[1]] <- c("a", "b", "c")
-  expect_warning(gs2 <- gsintersect(gs, gnames))
+  gs2 <- gs
+  gs2$genesets[[1]] <- c("a", "b", "c")
+  expect_warning(gs2 <- gsintersect(gs2, gnames))
   expect_equal(length(gs2), 1)
+
+  # should remove both sets
+  expect_warning(gs3 <- gsintersect(gs, c("1", "2")))
+  expect_equal(length(gs3), 0)
+
 })
-# TODO: what happens if intersect is empty set for some of them?
-# should remove them, throw warning.
