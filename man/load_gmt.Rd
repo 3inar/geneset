@@ -18,4 +18,3 @@ An object of class \code{gset} with the following elements:
 \description{
 Reads a file of the Gene Matrix Transposed file format.
 }
-

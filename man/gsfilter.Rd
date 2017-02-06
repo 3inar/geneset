@@ -24,4 +24,3 @@ gene set \code{gset} object. By default does no filtering.
 \seealso{
 \code{\link{gset}}
 }
-

@@ -28,4 +28,3 @@ smoking[1]
 \code{\link{gset}}
 }
 \keyword{datasets}
-

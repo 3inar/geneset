@@ -24,4 +24,3 @@ Builds an object of class \code{gset}. Basically a list with the following field
  \item{genesets}{list of character vectors containing gene symbols for each gene set}
 }
 }
-

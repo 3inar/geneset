@@ -23,4 +23,3 @@ in your own data. If any of the gene sets have no genes in common with the
 \seealso{
 \code{\link{gset}}
 }
-
