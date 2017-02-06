@@ -48,3 +48,15 @@
 #' stress[1]
 "stress"
 
+#' Blood immunological gene sets from humans
+#'
+#' Contains sets from the immunological collection (C7) of MSigDB. Sets contain the
+#' word "blood" in their description and have homo sapiens in their organism
+#' field.
+#'
+#' @format A \code{\link{gset}} object with 508 elements.
+
+#' @source \url{http://software.broadinstitute.org/gsea/msigdb/collections.jsp#C7}
+#'
+#' @seealso \code{\link{gset}}
+"immunological"
